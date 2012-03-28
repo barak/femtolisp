@@ -79,7 +79,7 @@
 	  __start #fn("8000r1e0302|NF6D0|Nk12^k22e3|\x84315E0|k12]k22e4e5312e6302e7`41;" [__init_globals
   *argv* *interactive* __script princ *banner* repl exit] __start)
 	  abs #fn("7000r1|`X650|y;|;" [] abs) any
-	  #fn("8000r2}F16D02|}M3117:02e0|}N42;" [any] any) arg-counts #table(#.not 1  #.atom? 1  #.number? 1  #.cons 2  #.set-cdr! 2  #.equal? 2  #.fixnum? 1  #.bound? 1  #.eq? 2  #.symbol? 1  #.builtin? 1  #.< 2  #.aset! 3  #.div0 2  #.cdr 1  #.null? 1  #.eqv? 2  #.compare 2  #.aref 2  #.car 1  #.set-car! 2  #.pair? 1  #.= 2  #.vector? 1  #.boolean? 1)
+	  #fn("8000r2}F16D02|}M3117:02e0|}N42;" [any] any) arg-counts #table(#.equal? 2  #.atom? 1  #.set-cdr! 2  #.symbol? 1  #.car 1  #.eq? 2  #.aref 2  #.boolean? 1  #.not 1  #.null? 1  #.eqv? 2  #.number? 1  #.pair? 1  #.builtin? 1  #.aset! 3  #.div0 2  #.= 2  #.bound? 1  #.compare 2  #.vector? 1  #.cdr 1  #.set-car! 2  #.< 2  #.fixnum? 1  #.cons 2)
 	  argc-error #fn("<000r2e0c1|c2}}aW670c3540c445;" [error "compile error: "
 							   " expects " " argument."
 							   " arguments."] argc-error)
@@ -104,7 +104,7 @@
   #.cons bq-process nconc list*]) lastcdr map #fn("8000r1e0|\x7f42;" [bq-bracket1])
   #fn("6000r1c0qm02|;" [#fn(">000r2|\x85;0c0e1}31K;|F6s0|Mc2\x82[0c0e3}i11`W670|N5E0c4c5L2e6|Ni11ax32L232K;~|Ne7|Mi1132}K42;c0e1e6|i1132}K31K;" [nconc
   reverse! unquote nreconc #.list 'unquote bq-process bq-bracket])])] bq-process)
-	  builtin->instruction #fn("9000r1e0~|^43;" [get] [#table(#.number? number?  #.cons cons  #.fixnum? fixnum?  #.equal? equal?  #.eq? eq?  #.symbol? symbol?  #.div0 div0  #.builtin? builtin?  #.aset! aset!  #.- -  #.boolean? boolean?  #.not not  #.apply apply  #.atom? atom?  #.set-cdr! set-cdr!  #./ /  #.function? function?  #.vector vector  #.list list  #.bound? bound?  #.< <  #.* *  #.cdr cdr  #.null? null?  #.+ +  #.eqv? eqv?  #.compare compare  #.aref aref  #.set-car! set-car!  #.car car  #.pair? pair?  #.= =  #.vector? vector?)
+	  builtin->instruction #fn("9000r1e0~|^43;" [get] [#table(#.equal? equal?  #.* *  #.car car  #.apply apply  #.aref aref  #.- -  #.boolean? boolean?  #.builtin? builtin?  #.null? null?  #.eqv? eqv?  #.function? function?  #.bound? bound?  #.cdr cdr  #.list list  #.set-car! set-car!  #.cons cons  #.atom? atom?  #.set-cdr! set-cdr!  #.symbol? symbol?  #.eq? eq?  #.vector vector  #.not not  #.pair? pair?  #.number? number?  #.div0 div0  #.aset! aset!  #.+ +  #.= =  #.compare compare  #.vector? vector?  #./ /  #.< <  #.fixnum? fixnum?)
 							   ()])
 	  caaaar #fn("6000r1|MMMM;" [] caaaar) caaadr
 	  #fn("6000r1|\x84MM;" [] caaadr) caaar #fn("6000r1|MMM;" [] caaar)
