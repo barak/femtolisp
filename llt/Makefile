@@ -22,9 +22,11 @@ endif
 
 default: $(TARGET)
 
-$(TARGET): $(OBJS)
+%.a:
 	rm -f $@
 	ar crs $@ $^
+
+$(TARGET): $(OBJS)
 
 clean:
 	rm -f *.o $(TARGET) core*

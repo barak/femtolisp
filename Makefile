@@ -37,9 +37,11 @@ flmain.o: flmain.c flisp.h
 $(LLT):
 	$(MAKE) -C $(LLTDIR) ARCHDEFS="$(ARCHDEFS)" DEBUG="$(DEBUG)"
 
-$(LIBTARGET).a: $(OBJS)
+%.a:
 	rm -f $@
 	ar crs $@ $^
+
+$(LIBTARGET).a: $(OBJS)	
 
 $(EXENAME): $(OBJS) $(LIBFILES) $(LIBTARGET).a flmain.o	
 
