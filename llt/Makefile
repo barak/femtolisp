@@ -20,6 +20,11 @@ CPPFLAGS += -DNDEBUG
 CFLAGS += -O3
 endif
 
+ifdef BOEHM
+CPPFLAGS += -DBOEHM_GC
+LDLIBS += -lgc
+endif
+
 default: $(TARGET)
 
 %.a:

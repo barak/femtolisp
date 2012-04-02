@@ -1,3 +1,7 @@
+# Build options:
+#  DEBUG=1     - compile for debugging (default: optimize, production)
+#  BOEHM=1     - enable Boehm garbage colletor (default: don't)
+
 CC = gcc
 
 NAME = flisp
@@ -26,6 +30,11 @@ CPPFLAGS += -DNDEBUG
 CFLAGS += -O2
 endif
 
+ifdef BOEHM
+CPPFLAGS += -DBOEHM_GC
+LDLIBS += -lgc
+endif
+
 default: $(EXENAME) test
 
 test: $(EXENAME)
@@ -35,7 +44,7 @@ flisp.o:  flisp.c cvalues.c operators.c types.c flisp.h print.c read.c equal.c
 flmain.o: flmain.c flisp.h
 
 $(LLT):
-	$(MAKE) -C $(LLTDIR) ARCHDEFS="$(ARCHDEFS)" DEBUG="$(DEBUG)"
+	$(MAKE) -C $(LLTDIR) ARCHDEFS="$(ARCHDEFS)" DEBUG="$(DEBUG)" BOEHM="$(BOEHM)"
 
 %.a:
 	rm -f $@
